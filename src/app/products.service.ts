@@ -26,7 +26,11 @@ export class ProductsService {
            .http
            .get(`${this.uri}`);
   }
-
+  deleteProduct(id) {
+    return this
+              .http
+              .get(`${this.uri}/delete/${id}`);
+  }
   editProduct(id) {
     return this
             .http
